@@ -10,8 +10,7 @@ import PreviousForecastPanel from "../../components/PreviousForecastPanel";
 
 const HomePage = () => {
   const { weather, historicalWeather } = useSelector((state) => state);
-  console.log('weather', weather);
-  console.log('historicalWeather', historicalWeather);
+
   return (
     <div className={clsx(classes.container, classes.weatherContainer)}>
       {

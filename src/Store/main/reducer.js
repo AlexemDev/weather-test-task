@@ -1,9 +1,15 @@
-import { FETCH_WEATHER_DATA, FETCH_HISTORICAL_WEATHER_DATA, FETCH_GRAPH_FORECAST_DATA } from './types';
+import {
+	FETCH_WEATHER_DATA,
+	FETCH_HISTORICAL_WEATHER_DATA,
+	FETCH_GRAPH_FORECAST_DATA,
+	ERROR_MESSAGE
+} from './types';
 
 const initialState = {
 	weather: null,
 	historicalWeather: null,
-	weatherForGraphs: null
+	weatherForGraphs: null,
+	error: null
 };
 
 const reducer = (state = initialState, action) => {
@@ -22,6 +28,11 @@ const reducer = (state = initialState, action) => {
 			return {
 				...state,
 				weatherForGraphs: action.payload
+			};
+		case ERROR_MESSAGE:
+			return {
+				...state,
+				error: action.payload
 			};
 		default:
 			return state;

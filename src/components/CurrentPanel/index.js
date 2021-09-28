@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import classes from './CurrentPanel.module.scss';
 import { useSelector } from 'react-redux'
 

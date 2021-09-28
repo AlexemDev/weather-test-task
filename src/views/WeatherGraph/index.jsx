@@ -8,7 +8,6 @@ const WeatherGraph = () => {
   return (
     <div className={clsx(classes.container, classes.weatherContainer)}>
       <SearchPanel />
-
     </div>
   );
 };

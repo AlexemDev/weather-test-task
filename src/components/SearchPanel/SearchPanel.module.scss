@@ -1,0 +1,25 @@
+@import 'src/styles/theme';
+
+.inputWrap {
+  display: flex;
+  margin-bottom: 10px;
+  &_button {
+    width: 100px;
+    cursor: pointer;
+    background-color: $whiteColor;
+    border: 1px solid $blackColor;
+    font-size: 16px;
+  }
+  &_input {
+    height: 40px;
+    padding-left: 15px;
+    outline: none;
+    margin-right: 15px;
+    border: 1px solid $blackColor;
+    background-color: $whiteColor;
+  }
+}
+
+.error {
+  color: $errorColor
+}

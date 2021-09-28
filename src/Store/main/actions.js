@@ -1,5 +1,10 @@
 import axios from 'axios';
-import { FETCH_WEATHER_DATA, FETCH_HISTORICAL_WEATHER_DATA, FETCH_GRAPH_FORECAST_DATA } from './types';
+import {
+  FETCH_WEATHER_DATA,
+  FETCH_HISTORICAL_WEATHER_DATA,
+  FETCH_GRAPH_FORECAST_DATA,
+  ERROR_MESSAGE
+} from './types';
 
 export const fetchWeather = () => (dispatch) => {
   try {
@@ -43,13 +48,18 @@ export const fetchGraphForecast = (query) => (dispatch) => {
   try {
     axios.get(`${process.env.REACT_APP_API_URL}forecast/daily?q=${query}&appid=${process.env.REACT_APP_API_KEY}`)
         .then((response) => {
-          console.log(response)
           dispatch({
             payload: response.data,
             type: FETCH_GRAPH_FORECAST_DATA
           });
+        }).catch(error => {
+          console.log(error);
+          dispatch({
+            payload: error.response.data.message,
+            type: ERROR_MESSAGE
+          });
         });
   } catch (error) {
-    console.log(error)
+    console.log(error);
   }
 }
