@@ -1,0 +1,17 @@
+@import 'src/styles/theme';
+
+html, body {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: $lightGray;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+

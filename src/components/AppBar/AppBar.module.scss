@@ -1,0 +1,26 @@
+@import 'src/styles/theme';
+
+.container {
+	max-width: $containerWidth;
+	margin: 0 auto;
+}
+
+.content {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.navBar {
+    background-color: $darkGray;
+}
+
+.linkItem {
+  color: $whiteColor;
+  text-decoration: none;
+  padding: 10px;
+  &:first-child {
+    padding-left: 0;
+  }
+}
+

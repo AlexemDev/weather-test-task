@@ -1,0 +1,58 @@
+@import 'src/styles/theme';
+
+.wrap {
+  width: 100%;
+  background-color: $whiteColor;
+  padding: 15px;
+}
+
+.title {
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+
+.time {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: .6;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.temperature {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.totalTemperature {
+  font-size: 84px;
+}
+
+.realFeelsTemperature {
+  font-size: 18px;
+}
+
+.weatherStatus {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.weatherDetails {
+  ul {
+    list-style-type: none;
+  }
+  &__item {
+    margin: 15px 0;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

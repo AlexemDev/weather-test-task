@@ -1,0 +1,10 @@
+@import 'src/styles/theme';
+
+.container {
+	max-width: $containerWidth;
+	margin: 0 auto;
+}
+
+.weatherContainer {
+  padding-top: 70px;
+}
